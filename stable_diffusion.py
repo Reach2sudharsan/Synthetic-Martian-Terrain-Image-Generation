@@ -47,10 +47,10 @@ def generate_controlnet_image(pipeline_controlnet, prompt, image):
 
 def prepare_output_directories():
     """ Ensure output directories exist. """
-    stable_diffusion_output_dir = "stable_diffusion_images"
+    stable_diffusion_output_dir = "datasets/stable_diffusion_images"
     os.makedirs(stable_diffusion_output_dir, exist_ok=True)
 
-    controlnet_output_dir = "controlnet_images"
+    controlnet_output_dir = "datasets/controlnet_images"
     os.makedirs(controlnet_output_dir, exist_ok=True)
 
     return stable_diffusion_output_dir, controlnet_output_dir
