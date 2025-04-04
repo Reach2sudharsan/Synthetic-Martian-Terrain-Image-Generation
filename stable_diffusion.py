@@ -79,6 +79,8 @@ def run_models(dem_folder, prompt, pipeline, stable_diffusion_output_dir, is_con
 
         generated_image.save(output_path)
         tqdm.write(f"Saved output: {output_path}")
+        if i == 5:
+            break
 
 def main():
     # Step 1: Check device (CUDA/CPU)
@@ -92,10 +94,12 @@ def main():
 
     # Step 4: Define your prompt (can be customized)
     prompt = "A deep crater on the Martian surface with steep cliffs and scattered boulders."
+    # prompt = "A deep crater on the Martian surface with steep cliffs, jagged rocks and rough terrain, and scattered boulders."
+    # prompt = "High-resolution photo of a Martian impact crater, surrounded by jagged rocks and rough terrain, no sand dunes, dry and desolate, aerial view, detailed textures"
 
     # Step 5: Process DEM images for Stable Diffusion and ControlNet
     dem_folder = "../Synthetic-Martian-Terrain-Image-Generation/DEM_Images"
-    # run_models(dem_folder, prompt, pipeline, stable_diffusion_output_dir)
+    run_models(dem_folder, prompt, pipeline, stable_diffusion_output_dir)
     run_models(dem_folder, prompt, pipeline, controlnet_output_dir, is_controlnet=True, pipeline_controlnet=pipeline_controlnet)
 
 if __name__ == "__main__":
