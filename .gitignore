@@ -7,3 +7,6 @@ miniconda3
 DEM_Images
 id_ed25519
 id_ed25519.pub
+controlnet_images
+stable_diffusion_images
+stable_diffusion_images_1
