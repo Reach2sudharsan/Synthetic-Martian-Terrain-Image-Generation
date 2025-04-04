@@ -47,14 +47,14 @@ def train_yolo(data_yaml, model_weights, epochs, batch_size, img_size, save_dir)
     print(f"Training completed! Results saved in {save_dir}")
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Train YOLOv8 on a custom dataset with varying synthetic ratios")
+    parser = argparse.ArgumentParser(description="Train YOLOv11 on a custom dataset with varying synthetic ratios")
     
     # Add argument for synthetic ratio with validation to ensure it is a valid value
-    parser.add_argument("--synthetic_ratio", type=int, required=True, choices=[0, 5, 10, 15, 20],
-                        help="Synthetic data percentage (0, 5, 10, 15, 20)")
+    parser.add_argument("--synthetic_ratio", type=int, required=True, choices=[0, 10, 20],
+                        help="Synthetic data percentage (0, 10, 20)")
 
-    parser.add_argument("--weights", type=str, default="yolov8n.pt", help="Pretrained model weights")
-    parser.add_argument("--epochs", type=int, default=50, help="Number of training epochs")
+    parser.add_argument("--weights", type=str, default="yolov11n.pt", help="Pretrained model weights")
+    parser.add_argument("--epochs", type=int, default=100, help="Number of training epochs")
     parser.add_argument("--batch", type=int, default=16, help="Batch size")
     parser.add_argument("--imgsz", type=int, default=640, help="Image size for training")
     parser.add_argument("--save_dir", type=str, default="runs/train", help="Directory to save results")
