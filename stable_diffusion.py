@@ -47,10 +47,10 @@ def generate_controlnet_image(pipeline_controlnet, prompt, image):
 
 def prepare_output_directories():
     """ Ensure output directories exist. """
-    stable_diffusion_output_dir = "datasets/stable_diffusion_images"
+    stable_diffusion_output_dir = "crater_datasets/stable_diffusion_images"
     os.makedirs(stable_diffusion_output_dir, exist_ok=True)
 
-    controlnet_output_dir = "datasets/controlnet_images"
+    controlnet_output_dir = "crater_datasets/controlnet_images"
     os.makedirs(controlnet_output_dir, exist_ok=True)
 
     return stable_diffusion_output_dir, controlnet_output_dir
@@ -79,8 +79,6 @@ def run_models(dem_folder, prompt, pipeline, stable_diffusion_output_dir, is_con
 
         generated_image.save(output_path)
         tqdm.write(f"Saved output: {output_path}")
-        if i == 5:
-            break
 
 def main():
     # Step 1: Check device (CUDA/CPU)
@@ -99,7 +97,7 @@ def main():
 
     # Step 5: Process DEM images for Stable Diffusion and ControlNet
     dem_folder = "../Synthetic-Martian-Terrain-Image-Generation/DEM_Images"
-    run_models(dem_folder, prompt, pipeline, stable_diffusion_output_dir)
+    # run_models(dem_folder, prompt, pipeline, stable_diffusion_output_dir)
     run_models(dem_folder, prompt, pipeline, controlnet_output_dir, is_controlnet=True, pipeline_controlnet=pipeline_controlnet)
 
 if __name__ == "__main__":
