@@ -36,7 +36,7 @@ mid_y_start = (42847 - 20000) // 2  # Start y of middle square
 mid_x_end = mid_x_start + 20000 - crop_width  # Max x within middle square
 mid_y_end = mid_y_start + 20000 - crop_height  # Max y within middle square
 
-count = 1264
+count = 100
 # Generate 200 random (x, y) positions within the middle region
 random_positions = [(random.randint(mid_x_start, mid_x_end), random.randint(mid_y_start, mid_y_end)) for _ in range(count)]
 
