@@ -14,3 +14,6 @@ controlnet_images_2
 stable_diffusion_images_2
 crater_datasets
 datasets
+syn0.05_size1000_90-5-5
+syn0.5_size1000_90-5-5
+yolo_datasets
