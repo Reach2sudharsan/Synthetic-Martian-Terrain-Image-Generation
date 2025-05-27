@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['0']
+
+roboflow:
+  workspace: sg-icrum
+  project: confirmed_ctrlnet_sum2025
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/sg-icrum/confirmed_ctrlnet_sum2025/dataset/1
