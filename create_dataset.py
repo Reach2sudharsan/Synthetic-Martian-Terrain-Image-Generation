@@ -147,11 +147,14 @@ if __name__ == "__main__":
     synthetic_path = "crater_datasets/StblDiffCraterImages"
     size = 1000
 
-    ratio = 0.05
+    ratio = 0.00
     create_dataset(real_path, synthetic_path, size, ratio, tvt_split="90-5-5")
 
-    ratio = 0.50
-    create_dataset(real_path, synthetic_path, size, ratio, tvt_split="90-5-5")
+    # ratio = 0.05
+    # create_dataset(real_path, synthetic_path, size, ratio, tvt_split="90-5-5")
+
+    # ratio = 0.50
+    # create_dataset(real_path, synthetic_path, size, ratio, tvt_split="90-5-5")
 
 
 
