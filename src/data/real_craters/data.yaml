@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['crater']
+
+roboflow:
+  workspace: sg-icrum
+  project: 1024-plduh-lb3r1
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/sg-icrum/1024-plduh-lb3r1/dataset/2

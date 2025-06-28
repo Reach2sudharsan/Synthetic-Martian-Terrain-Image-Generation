@@ -16,3 +16,4 @@ crater_datasets
 syn0.05_size1000_90-5-5
 syn0.5_size1000_90-5-5
 yolo_datasets
+src/models
